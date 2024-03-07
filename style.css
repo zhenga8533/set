@@ -1,0 +1,155 @@
+/* General HTML CSS */
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #505050;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #505050;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.game-over {
+    font-size: 200px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8B0000;
+}
+
+/* Button CSS to make look like text */
+.button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+  
+.button:hover {
+    color: #3F00FF;
+}
+
+/* Toast Notifications (source: https://www.w3schools.com/howto/howto_js_snackbar.asp) */
+#toast {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    top: 30px; /* 30px from the top */
+}
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+#toast.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+  /* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+  
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+  
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+  
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+
+/* Card container positioning */
+#cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 84vh;
+}
+
+/* Card texturing */
+.card {
+    width: 100px;
+    height: 140px;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+}
+
+.card-fill {
+    background: var(--color);
+}
+
+.card-stripe {
+    background: repeating-linear-gradient(
+        45deg,
+        #FFFFFF,
+        #FFFFFF 10px,
+        var(--color) 10px,
+        var(--color) 20px
+    );
+}
+
+.card-open {
+    width: 60px;
+    height: 100px;
+    border: 23px solid var(--color);
+}
+
+.card-glow {
+    box-shadow: 0 0 20px 10px rgba(255, 215, 0, 1);
+}
+
+.card-select {
+    box-shadow: 0 0 20px 10px rgb(0, 255, 255);
+}
+
+.card-shape {
+    display: flex;
+    margin: auto;
+    width: 60px;
+    height: auto;
+}

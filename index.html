@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Set</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div>Time: <span id="timer">90</span></div>
+      <div>Modes:
+        <button class="modeButton button">Normal</button>
+        <button class="modeButton button">Unlimited</button>
+        <button class="modeButton button">90+10</button>
+        <button class="modeButton button">180+5</button>
+      </div>
+      <div>Cards: <span id="remain">81</span></div>
+    </header>
+
+    <main>
+      <div id="toast">Placeholder</div>
+      <table id="cards"></table>
+    </main>
+
+    <footer>
+      <div>Score: <span id="score">0</span></div>
+      <div>Set (Card Game)</div>
+      <div>
+        <button id="hintButton" class="button">Hint</button>
+        <button id="shuffleButton" class="button">Shuffle</button>
+        <button id="pauseButton" class="button">Pause</button>
+        <button id="restartButton" class="button">Restart</button>
+      </div>
+    </footer>
+
+    <div id="gameOver" class="game-over" style="display: none;">GAME OVER</div>
+	<script src="script.js"></script>
+  </body>
+</html>
